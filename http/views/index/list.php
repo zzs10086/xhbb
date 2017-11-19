@@ -1,4 +1,9 @@
 <?php use yii\widgets\LinkPager;?>
+<?php
+$this->title = '性感美女,美女写真';
+$this->registerMetaTag(array("name"=>"keywords","content"=>"性感美女,美女写真"));
+$this->registerMetaTag(array("name"=>"description","content"=>"性感美女,美女写真"));
+?>
 <div class="tj"></div>
 
 <div class="main">

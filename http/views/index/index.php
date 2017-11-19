@@ -1,15 +1,17 @@
+<?php
+$this->title = '美女图片 - 明星美女写真专辑 高清性感美女图片欣赏';
+$this->registerMetaTag(array("name"=>"keywords","content"=>"宝贝,美女,图片,写真,美女图片,美女写真"));
+$this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网，收集精美的美女图片，包括明星美女写真图片专辑，大学校花美女贴图，性感车模写真等各类最新最好看的性感美女图片。"));
+?>
 <div class="index-box">
      <div class="slide">
           <div class="FocusPic">
 
                <div class="content" id="main-slide" style="width: 745px; height: 340px;">
                     <div class="changeDiv">
-                         <a target="_blank" href="/mei/qingchun/201707/84825.html" title="皮肤白净内衣女孩" style="display: none;"><img src="http://www.zbjuran.com/uploads/allimg/170725/2-1FH51505410-L.jpg" alt="皮肤白净内衣女孩" width="745" height="340"></a>
-                         <a target="_blank" href="/mei/xinggan/201707/84823.html" title="短发美女户外抛胸露香肩写真" style="display: none;"><img src="http://www.zbjuran.com/uploads/allimg/170725/2-1FH5145H00-L.jpg" alt="短发美女户外抛胸露香肩写真" width="745" height="340"></a>
-                         <a target="_blank" href="/mei/xinggan/201707/84764.html" title="内衣风情美女床上写真" style="display: none;"><img src="http://www.zbjuran.com/uploads/allimg/170715/2-1FG51531310-L.jpg" alt="内衣风情美女床上写真" width="745" height="340"></a>
-                         <a target="_blank" href="/mei/mingxing/201707/84725.html" title="酷似佟丽娅的内衣美女" style="display: none;"><img src="http://www.zbjuran.com/uploads/allimg/170707/2-1FFG63R00-L.jpg" alt="酷似佟丽娅的内衣美女" width="745" height="340"></a>
-                         <a target="_blank" href="/mei/xinggan/201706/84707.html" title="这么诱人的九尾cos看了把持不住" style="display: inline;"><img src="http://www.zbjuran.com/uploads/allimg/170707/2-1FFG506440-L.jpg" alt="这么诱人的九尾cos看了把持不住" width="745" height="340"></a>
-
+                         <?php foreach ($foucs as $k=>$v){?>
+                         <a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>" style="display: none;"><img src="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="745" height="340"></a>
+                         <?php } ?>
                     </div>
                     <div class="title-bg" style="width: 745px;"></div>
                </div>
@@ -62,6 +64,20 @@
      <div class="pic-list mb7">
           <ul>
                <?php foreach ($meitun as $k=>$v){?>
+                    <li>
+                         <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
+                              <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                         </div>
+                         <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                    </li>
+               <?php } ?>
+          </ul>
+     </div>
+
+     <div class="title-a mt10"><h2>制服美女</h2></div>
+     <div class="pic-list mb7">
+          <ul>
+               <?php foreach ($zhifu as $k=>$v){?>
                     <li>
                          <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
                               <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>

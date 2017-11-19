@@ -25,6 +25,8 @@ class IndexController extends BaseController
      public function actionIndex()
      {
 
+          //轮播
+          $foucs =$this->getFoucs(6);
           //今日更新
           $new = $this->getArticleNew(10);
           //性感美女
@@ -35,6 +37,8 @@ class IndexController extends BaseController
           $meitun = $this->getArticleByCategory(8);
           //丝袜
           $siwai = $this->getArticleByCategory(3);
+          //制服
+          $zhifu = $this->getArticleByCategory(7);
 
 
           return $this->render('index', [
@@ -43,9 +47,15 @@ class IndexController extends BaseController
                'meitun'=>$meitun,
                'siwai'=>$siwai,
                'new'=>$new,
+               'foucs'=>$foucs,
+               'zhifu'=>$zhifu,
           ]);
      }
 
+     private function getFoucs($limit){
+          $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1,'is_foucs'=>1])->limit($limit)->asArray()->orderBy('id desc')->all();
+          return $data;
+     }
      /**
       * 性感
       * @return string
