@@ -1,0 +1,62 @@
+.content-wrapper{padding-left: 0;background: #eef0f4;}
+.l_form-inline .l_form-group{margin-left: 20px;margin-top: 25px;}
+.l_control-label {margin-right: 8px; font-size: 14px !important;}
+.l_from-control{padding:3px 5px;}
+.l_content-header > h1{font-size: 22px;margin-left: -10px;}
+.l_box .box-header .box-title,.l_box-header .box-title{font-size: 22px;color: #333;}
+.l_box-header .box-title{margin-left: -20px;}
+.l_content-header > h1 > small {font-size: 14px;color: #666;}
+.l_box{border: none;margin-left: -10px;}
+.l_baojia{margin-left: 0;}
+.l_panel-default{border: none;}
+.l_panel-default > .panel-heading {background-color: #fff;border-bottom: 2px solid #3b6dc9;}
+.l_btn-warning{background: #fff;border: none;color: #666666;font-size: 14px;}
+/*.l_content{float: left;}*/
+.y_content-wrapper{overflow: hidden; margin-left: 40px;}
+/*.btn-success{font-size: 14px!important; font-weight: bold; color: #385aa1; background: none; border: none;}*/
+/*.btn-info{background: #f0f0f0; font-size: 14px; color: #fff; border: none;}*/
+.l_btn-warning:hover{background: #00c0ef;color: #fff;}
+/*.btn-info:hover{background: #e1eefb;color: #333;}*/
+.l_content-header small{padding-left: 20px!important;}
+.l_btn-warning{background: #f0f0f0; font-size: 14px; color: #666666; border: none;}
+/*.y_btn-success:hover{background: red; color: #385aa1;}*/
+.y_col-sm-10{position: relative; left: -20px;}
+.y_brand_left{margin-right: 10px;}
+/*.brand{position: relative; top: 5px;}
+.btn{margin-right: 15px;}*/
+.y_btnA{background: none; font-size: 14px!important; color: #666666; position: relative; left: -27px;}
+/*.panel-heading .current{color: #385aa1;}
+.box-body{padding: 0px 20px;}*/
+.y_brand{padding-left: 0px; position: relative; left: 10px;}
+.y_box-body{padding: 15px 0px;}
+.y_table-sale{position: relative; left: -15px;}
+/*#selectShop{height: 22px; line-height: 22px;}*/
+/*.btn-warning{background: #e1eefb;}*/
+/*鐑攢杞�*/
+.l_bottomBox{padding-bottom: 20px;border: none;}
+.box .box-header .l_chexichoose{font-size: 20px;padding-left: 8px;}
+.l_hengxian .box-header{margin-bottom: 6px;}
+.l_hengxian .box-header .l_bottombiankuang {height: 2px;width: 98.4%;background: #3b6dc9;margin-left: 8px;margin-top: 6px;}
+.l_hengxian .box-header .box-title {font-size: 14px;color: #666;}
+/*鏂伴椈鍒楄〃*/
+.l_btn-warning {border: none;}
+.l_tianchong{margin-bottom: 8px;}
+.l_topborder{border-top: 3px solid #00c1ef;}
+/*鏂伴椈绠＄悊*/
+.l_leftbox{margin-left: -10px;}
+.treeview-menu .active , .treeview-menu li:hover{background: #00c1ef;}
+.sidebar-menu .treeview-menu > li > a {padding: 8px 8px 8px 40px;width: 100%;}
+.sidebar-menu .treeview-menu {padding-left: 0px;}
+.l_btn{margin-right: 0;}
+.btn-success { border:none;}
+.l_btn-info{background: #32aafa;border-color: #32aafa;}
+.l_blueColor{color: #385aa1;}
+.l_weight{font-weight: 600;}
+.l_marginRight{margin-right: 8px;margin-top: 8px;}
+.l_surechange{width: 680px;}
+.l_form-group{border-radius: 3px;}
+.l_chooseclass{font-weight: 600;color: #385aa1;}
+.form-group.field-cardealernewsarticlecontent-content{margin-left: 0}
+.l_form-control{width: 49.645%;display: inline-block;}
+.l_thumbnail{margin-right: 10px;}
+.l_checkbox-inline{margin-left: 0px !important;}
