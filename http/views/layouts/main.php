@@ -56,8 +56,9 @@ AppAsset::register($this);
     <div class="finner">
         <div class="flogo"></div>
         <div class="fabout">
-            <div class="w" style="line-height:90px;">
-                ©2017 喜欢宝贝 版权所有<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263545942'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D1263545942%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+            <div style="padding:30px 10px 10px 10px;">
+                本站纯属免费<a href="<?php echo CEnv::HOST_WWW;?>" title="美女图片">美女图片</a>欣赏网站,所有<a href="<?php echo CEnv::HOST_WWW;?>" title="喜欢宝贝">喜欢宝贝</a>图片均收集于互联网,如有侵犯版权请来信告知,我们将立即更正。
+                <br>©2017 喜欢宝贝 版权所有  <a href="http://www.miitbeian.gov.cn/" target="_blank">苏ICP备16035736号-1</a>  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263545942'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D1263545942%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
             </div>
         </div>
     </div>
