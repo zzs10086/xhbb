@@ -22,6 +22,7 @@ use Yii;
 class IndexController extends BaseController
 {
 
+
      public function actionIndex()
      {
 
@@ -62,13 +63,24 @@ class IndexController extends BaseController
       */
      public function actionXinggan()
      {
+
           $cid = 10;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+               'list'=>$res,
+               'title'=>'性感图片_性感美女_性感美女套图 - 喜欢宝贝',
+               'keywords'=>'性感美女,性感图片,美女套图',
+               'description'=>'性感美女频道提供各类顶级美女机构性感美女图片，如推女郎、秀人网、ROSI等众多性感美女写真及大胆日本美女艺术套图。',
+               'category_name'=>'性感',
+               'category_url'=>'xinggan',
+          ];
+
+          return $this->render('list', $data);
      }
      /**
-      * 性感
+      * 丰乳
       * @return string
       */
      public function actionFengru()
@@ -76,10 +88,19 @@ class IndexController extends BaseController
           $cid = 2;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'丰乳_大胸_大奶套图 - 喜欢宝贝',
+              'keywords'=>'丰乳,大胸,大奶,美女',
+              'description'=>'丰乳频道提供各类丰乳,大胸，大奶美女图片。',
+              'category_name'=>'丰乳',
+              'category_url'=>'fengru',
+          ];
+          return $this->render('list', $data);
      }
      /**
-      * 性感
+      * 翘臀
       * @return string
       */
      public function actionQiaotun()
@@ -87,10 +108,19 @@ class IndexController extends BaseController
           $cid = 8;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'翘臀_美臀_肥臀套图 - 喜欢宝贝',
+              'keywords'=>'翘臀,美臀,肥臀,美女',
+              'description'=>'翘臀频道提供各类翘臀,美臀,肥臀美女图片。',
+              'category_name'=>'翘臀',
+              'category_url'=>'qiaotun',
+          ];
+          return $this->render('list', $data);
      }
      /**
-      * 性感
+      * 美腿
       * @return string
       */
      public function actionMeitui()
@@ -98,11 +128,20 @@ class IndexController extends BaseController
           $cid = 9;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'美腿_丝袜_黑丝_长腿美女套图 - 喜欢宝贝',
+              'keywords'=>'美腿,丝袜,黑丝袜,长腿,美女',
+              'description'=>'美腿频道提供各类美腿,丝袜,黑丝,长腿美女图片。',
+              'category_name'=>'美腿',
+              'category_url'=>'meitui',
+          ];
+          return $this->render('list', $data);
      }
 
      /**
-      * 性感
+      * 女神
       * @return string
       */
      public function actionNvshen()
@@ -110,10 +149,19 @@ class IndexController extends BaseController
           $cid = 5;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'女神_清纯_漂亮_气质美女套图 - 喜欢宝贝',
+              'keywords'=>'女神,清纯,漂亮,气质,美女',
+              'description'=>'女神频道提供各类女神,清纯,漂亮,气质美女图片。',
+              'category_name'=>'女神',
+              'category_url'=>'nvshen',
+          ];
+          return $this->render('list', $data);
      }
      /**
-      * 性感
+      * 制服
       * @return string
       */
      public function actionZhifu()
@@ -121,11 +169,21 @@ class IndexController extends BaseController
           $cid = 7;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'制服_女仆_校服_情趣内衣套图 - 喜欢宝贝',
+              'keywords'=>'制服,女仆,校服,情趣内衣',
+              'description'=>'制服频道提供各类制服,女仆,校服,情趣内衣图片。',
+              'category_name'=>'制服',
+              'category_url'=>'zhifu',
+          ];
+
+          return $this->render('list', $data);
      }
 
      /**
-      * 性感
+      * 写真
       * @return string
       */
      public function actionXiezhen()
@@ -133,16 +191,36 @@ class IndexController extends BaseController
           $cid = 12;
           $page = Yii::$app->request->get('page', 1);
           $res = $this->getList($cid,$page);
-          return $this->render('list', $res);
+
+          $data = [
+              'list'=>$res,
+              'title'=>'写真_旗袍_国模_性感写真套图 - 喜欢宝贝',
+              'keywords'=>'写真,旗袍,国模,性感写真',
+              'description'=>'写真频道提供各类写真,旗袍,国模,性感写真套图图片。',
+              'category_name'=>'写真',
+              'category_url'=>'xiezhen',
+          ];
+          return $this->render('list', $data);
      }
 
      public function actionShow()
      {
+          $cate = array(
+               10=> array('name'=>'性感美女','url'=>'xinggan'),
+               2=> array('name'=>'丰乳美胸','url'=>'fengru'),
+               8=> array('name'=>'翘臀','url'=>'qiaotun'),
+               9=> array('name'=>'美腿','url'=>'meitui'),
+               5=> array('name'=>'女神','url'=>'nvshen'),
+               7=> array('name'=>'制服','url'=>'zhifu'),
+               12=> array('name'=>'写真','url'=>'xiezhen'),
+          );
           $cid = 10;
           $id = Yii::$app->request->get('id', 1);
           $page = Yii::$app->request->get('page', 1);
           //文章的信息
           $data = ByArticle::findOne($id)->toArray();
+
+          $category_id = isset($data['category_id']) ? $data['category_id'] : 10;
           //文章总共多少图片
           $list =ByArticlePic::find()->where(['aid'=>$id])->asArray()->orderBy('sort_rank desc')->all();
 
@@ -153,7 +231,6 @@ class IndexController extends BaseController
           //前一篇
           $preArticle = $this->preArticle($id);
           $nextArticle = $this->nextArticle($id);
-         // echo '<pre>'; print_R($preArticle);print_R($nextArticle);exit;
 
           return $this->render('show', [
                'data'=>$data,
@@ -167,7 +244,7 @@ class IndexController extends BaseController
                'guess'=>$guess,
                'preArticle'=>$preArticle,
                'nextArticle'=>$nextArticle,
-
+               'cate'=>$cate[$category_id],
 
           ]);
      }
@@ -185,8 +262,8 @@ class IndexController extends BaseController
       * 分类下的列表
       */
      public function getList($cid, $page=1, $limit=16){
-          $offset = ($page-1)*$limit;
 
+          $offset = ($page-1)*$limit;
 
           if(!$cid){
               return false;
@@ -222,402 +299,6 @@ class IndexController extends BaseController
      private function getArticleByCategory($cid, $limit = 4){
           $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1, 'category_id'=>$cid])->limit($limit)->asArray()->orderBy('id desc')->all();
           return $data;
-     }
-
-     /**
-      * vip 价格列表
-      */
-     public function actionMoney(){
-
-          $data = ByMoney::find()->where(['status' => 1])->asArray()->orderBy('sort_rank desc')->all();
-
-          self::output($data);
-     }
-
-     /**
-      *
-      * 分类
-      */
-     public function actionGroup(){
-
-          $data = ByCategory::find()->where(['status' => 1])->asArray()->orderBy('sort_rank desc')->all();
-
-          if($data){
-
-               $groupCountArr =[];
-
-               $groupCount = ByArticle::find()->select(['category_id', 'count(id) as num'])->groupBy('category_id')->asArray()->all();
-
-               if($groupCount){
-                    $groupCountArr = array_column($groupCount, 'num', 'category_id');
-               }
-
-               foreach ($data as &$item){
-                    $item['counts'] = isset($groupCountArr[$item['id']]) ? $groupCountArr[$item['id']] : 0;
-               }
-
-
-          }
-          self::output($data);
-     }
-
-     /**
-      *
-      * 分类下的列表
-      */
-     public function actionList(){
-
-          $cid = Yii::$app->request->get('cid', 0);
-          $page = Yii::$app->request->get('page', 1);
-          $limit = Yii::$app->request->get('limit', 10);
-          $openid = Yii::$app->request->get('openid', '');
-          $offset = ($page-1)*$limit;
-
-          if(!$cid) self::output(null,10004);
-
-          if(!$cid){
-               self::output(array());
-          }
-
-          $data = ByArticle::find()->where(['status' => 1, 'category_id'=>$cid])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->all();
-
-          $aidArr = array_column($data, 'id'); //文章id
-          $praiseAidArr = [];
-          //文章id和openid 同时存在
-          if($aidArr && $openid){
-               $praiseAidArr =  UserPraise::find()->select(['aid'])->where(['openid'=> $openid])->andWhere(['in', 'aid', $aidArr])->asArray()->column();
-          }
-
-          if(!empty($data)){
-               foreach ($data as &$item){
-                    $item['ispraise'] = in_array($item['id'], $praiseAidArr) ? 1 : 0;
-                    $item['addtime'] = date('Y-m-d',$item['addtime']);
-                    //$item['praise_count'] = $item['praise_count'] + 1024 + $item['id'];
-                    $item['praise_count'] = $item['praise_count'] + ($item['id']%9) * 111 + $item['id'];
-               }
-          }
-
-          self::output($data);
-     }
-
-
-     /**
-      *
-      * 最新的
-      */
-     public function actionNew(){
-
-          $page = Yii::$app->request->get('page', 1);
-          $limit = Yii::$app->request->get('limit', 10);
-          $openid = Yii::$app->request->get('openid', '');
-          $offset = ($page-1)*$limit;
-
-          $data = ByArticle::find()->where(['status' => 1])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->all();
-          $article = ByArticle::find()->where(['status' => 1])->orderBy('id desc')->one();
-          $time1 = new \DateTime(date('Y-m-d',$article->addtime));
-          $time2 = new \DateTime(date('Y-m-d',time()));
-          $interval = $time2->diff($time1);
-          $days_diff = $interval->days;
-
-          if(!empty($data)){
-
-               $aidArr = array_column($data, 'id'); //文章id
-               $praiseAidArr = [];
-
-               //文章id和openid 同时存在
-               if($aidArr && $openid){
-
-                    $praiseAidArr =  UserPraise::find()->select(['aid'])->where(['openid'=> $openid])->andWhere(['in', 'aid', $aidArr])->asArray()->column();
-
-               }
-
-               foreach ($data as &$item){
-                    $item['ispraise'] = in_array($item['id'], $praiseAidArr) ? 1 : 0;
-                    $interval = \DateInterval::createFromDateString($days_diff.' day');
-                    $datetime = new \DateTime(date('Y-m-d',$item['addtime']));
-                    $datetime->add($interval);
-                    $item['addtime'] = $datetime->format('Y-m-d');
-                    //$item['praise_count'] = $item['praise_count'] + 1024 + $item['id'];
-                    $item['praise_count'] = $item['praise_count'] + ($item['id']%9) * 111 + $item['id'];
-               }
-
-          }
-
-          self::output($data);
-
-     }
-
-     /**
-      *
-      * 文章详情
-      */
-
-     public function actionDetail(){
-          $openid = Yii::$app->request->get('openid', '');
-          $id = Yii::$app->request->get('id', 0);
-          if(!$id) self::output(null,10004);
-
-          //self::debug_log($openid);
-
-          //文章的信息
-          $data = ByArticle::findOne($id)->toArray();
-          //文章的多图
-          $data['list'] =ByArticlePic::find()->where(['aid'=>$id])->asArray()->orderBy('sort_rank desc')->all();
-
-
-          //防止分享出去的没有openid
-          if($openid){
-               $userPraise = new UserPraise();
-               $data['ispraise'] = ($userPraise::find()->where(['openid' => $openid, 'aid'=> $id])->exists() ? 1: 0);
-
-               $userCollet = new ByUserCollet();
-               $data['iscollet'] = ($userCollet::find()->where(['openid' => $openid, 'aid'=> $id])->exists() ? 1: 0);
-               //$data['praise_count'] = $data['praise_count'] + 1024 + $data['id'];
-               //阅读次数加1
-               $user = ByUser::find()->where(['openid' => $openid])->one();
-               if($user){
-                    $user->read_count += 1;
-                    $user->save();
-               }
-
-          }else{
-               $data['ispraise']=0;
-               $data['iscollet']=0;
-
-          }
-          $data['praise_count'] = $data['praise_count'] + ($data['id']%9) * 111 + $data['id'];
-          $data['collet_count'] = $data['collet_count'] + ($data['id']%9) * 51 + ceil($data['id']/3);
-
-          self::output($data);
-     }
-
-     /**
-      *
-      * 用户收藏列表
-      */
-     public function actionColletlist(){
-
-
-          $page = Yii::$app->request->get('page', 1);
-          $limit = Yii::$app->request->get('limit', 10);
-          $offset = ($page-1)*$limit;
-
-          $openid = Yii::$app->request->get('openid', '');
-          if(!$openid) self::output(null,10004);
-
-          //$data = ByUserCollet::find()->joinWith(['by_article'])->where(['ByUserCollet.openid' => $openid])->asArray()->all();
-          $data = ByUserCollet::find()
-               ->select(['b.id','b.title','b.praise_count','b.collet_count','b.is_vip', 'b.addtime', 'b.pic_url'])
-               ->alias('a')
-               ->leftJoin(ByArticle::tableName() . 'as b', 'a.aid = b.id')
-               ->where(['a.openid'=>$openid, 'b.status'=>1])
-               ->offset($offset)->limit($limit)
-               ->asArray()
-               ->orderBy('a.id desc')
-               ->all();
-
-          if(!empty($data)){
-
-               $aidArr = array_column($data, 'id'); //文章id
-               $praiseAidArr = [];
-
-               //文章id和openid 同时存在
-               if($aidArr && $openid){
-
-                    $praiseAidArr =  UserPraise::find()->select(['aid'])->where(['openid'=> $openid])->andWhere(['in', 'aid', $aidArr])->asArray()->column();
-
-               }
-
-               foreach ($data as &$item){
-                    $item['ispraise'] = in_array($item['id'], $praiseAidArr) ? 1 : 0;
-                    $item['addtime'] = date('Y-m-d',$item['addtime']);
-                    //$item['praise_count'] = $item['praise_count'] + 1024 + $item['id'];
-                    $item['praise_count'] = $item['praise_count'] + ($item['id']%9) * 111 + $item['id'];
-               }
-
-          }
-
-          self::output($data);
-     }
-
-     /**
-      * 用户取消收藏
-      */
-     public function actionUncollet(){
-          $openid = Yii::$app->request->get('openid', '');
-          $aid = Yii::$app->request->get('aid', 0);
-
-          if(!$openid || !$aid) self::output(null,10004);
-
-          $user = ByUser::find()->where(['openid' => $openid])->asArray()->one();
-          if(!$user) self::output(null,10005);
-
-
-          $userCollet = ByUserCollet::find()->where(['openid' => $openid, 'aid'=> $aid])->one();
-          if($userCollet !==null && $userCollet->delete()) {
-               self::output();
-          }
-          self::output(null,10009);
-
-     }
-     /**
-      *
-      * 用户收藏
-      */
-     public function actionCollet(){
-
-          $openid = Yii::$app->request->get('openid', '');
-          $unionid = Yii::$app->request->get('unionid', '');
-          $aid = Yii::$app->request->get('aid', 0);
-
-          if(!$openid || !$aid) self::output(null,10004);
-
-          $user = ByUser::find()->where(['openid' => $openid])->asArray()->one();
-          if(!$user) self::output(null,10005);
-
-          $userCollet = new ByUserCollet();
-
-          if($userCollet::find()->where(['openid' => $openid, 'aid'=> $aid])->exists()){
-
-               self::output(null,10002);
-          }
-
-          $userCollet->user_id = $user['id'];
-          $userCollet->aid = $aid;
-          $userCollet->openid = $openid;
-          $userCollet->unionid = $unionid;
-          $userCollet->addtime = time();
-
-          $userCollet->save();
-
-          //文章收藏数加1
-          $article = ByArticle::findOne($aid);
-          $article->collet_count += 1;
-          $article->save();
-
-          self::output(null,10003);
-
-     }
-
-     /**
-      *
-      * 点赞
-      */
-     public function actionPraise(){
-          $openid = Yii::$app->request->get('openid', '');
-          $aid = Yii::$app->request->get('aid', 0);
-
-          if(!$openid || !$aid) self::output(null,10004);
-
-          $user = ByUser::find()->where(['openid' => $openid])->asArray()->one();
-
-          if(!$user) self::output(null,10005);
-
-          $userPraise = new UserPraise();
-
-          if($userPraise::find()->where(['openid' => $openid, 'aid'=> $aid])->exists()){
-
-               self::output(null,10006);
-          }
-
-          $userPraise->user_id = $user['id'];
-          $userPraise->aid = $aid;
-          $userPraise->openid = $openid;
-          $userPraise->addtime = time();
-
-          $userPraise->save();
-
-          //文章点赞数加1
-          $article = ByArticle::findOne($aid);
-          $article->praise_count += 1;
-          $article->save();
-
-          self::output(null,10007);
-
-
-     }
-
-     /**
-      *
-      * 用户会员信息
-      */
-     public function actionUserinfo(){
-
-          $openid = Yii::$app->request->get('openid', '');
-          if(!$openid) self::output(null,10004);
-
-          $user = ByUser::find()->where(['openid' => $openid])->asArray()->one();
-
-          if(!$user) self::output(null,10005);
-
-          $user['is_view'] = 0; // 0是不可阅读 1是可阅读
-          $user['is_expire'] = 0; // 0是已过期 1未过期
-          //判断是否可用点击
-          if($user['is_forever'] == 1){
-               $user['is_view'] = 1;
-               self::output($user);
-          }
-
-          //过期
-          if((strtotime($user['expire_time']) + 84600) < time()){
-               $user['is_view'] = 0;
-          }else{
-               $user['is_view'] = 1;
-               $user['is_expire'] = 1;
-          }
-
-          if($user['read_count'] < self::READ_COUNT){
-               $user['is_view'] = 1;
-          }
-
-          self::output($user);
-     }
-
-     /**
-      *
-      * 付款方式
-      */
-     public function actionPaymode(){
-          $openid = Yii::$app->request->get('openid', '');
-          if(!$openid) self::output(null,10004);
-
-          //首先查看 分享次数,超过3次则只需0.99元
-          $share_count = UserShare::find()->where(['openid' => $openid, 'status'=>0])->count();
-          $share_data = ByMoney::find()->where(['id' => 5])->asArray()->one();
-          if($share_count >= 3){
-               $data = $share_data;
-               $data['msg'] = '分享任务完成,'.$data['msg'] ."\n" . "(已分享".$share_count."次)";
-          }else{
-               $data = ByMoney::find()->where(['is_default' => 1])->asArray()->one();
-               $data['msg'] = $data['msg'] ."\n" . $share_data['msg']."\n". "(已分享".$share_count."次)";
-          }
-
-          if(!$data) self::output(null,10008);
-
-          self::output($data);
-
-     }
-
-     /**
-      *
-      * 分享
-      */
-     public function actionShare(){
-          $openid = Yii::$app->request->get('openid', '');
-          $url = Yii::$app->request->get('url', '');
-          if(!$openid || !$url) self::output(null,10004);
-
-          $userShare = new UserShare();
-
-          $userShare->url = $url;
-          $userShare->openid = $openid;
-          $userShare->addtime = time();
-          $userShare->status = 0;
-
-          $userShare->save();
-
-          self::output(null,10010);
-
      }
 
 

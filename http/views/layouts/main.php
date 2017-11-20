@@ -27,7 +27,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="header">
     <div class="hd_w">
-        <div class="logo"><a href="http://www.xihuanbaobei.com"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="居然搞笑网"></a></div>
+        <div class="logo"><a href="http://www.xihuanbaobei.com"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="喜欢宝贝"></a></div>
         <div class="nav">
             <ul>
                 <li><a href="/">首页</a></li>

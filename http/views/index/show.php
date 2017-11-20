@@ -1,10 +1,10 @@
 <?php
-$this->title = '性感美女,美女写真';
-$this->registerMetaTag(array("name"=>"keywords","content"=>"乳神,丰乳肥臀"));
+$this->title =$data['title']."-喜欢宝贝";
+$this->registerMetaTag(array("name"=>"keywords","content"=>$data['title']));
 $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝提供性感美女高清图片-".$data['title']."。www.xihuanbaobei.com"));
 ?>
 <div class="main">
-     <div class="mbx">当前位置：<a href="/">喜欢宝贝</a> &gt; <a href="/xinggan">性感美女</a>&gt; <?php echo $data['title'];?></div>
+     <div class="mbx">当前位置：<a href="/">喜欢宝贝</a> &gt; <a href="/<?php echo $cate['url'];?>"><?php echo $cate['name'];?></a>&gt; <?php echo $data['title'];?></div>
      <div class="pic_box">
           <div class="pic_title"></div>
           <div class="pic_img">
