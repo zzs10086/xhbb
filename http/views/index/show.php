@@ -2,6 +2,7 @@
 $this->title =$data['title']."-喜欢宝贝";
 $this->registerMetaTag(array("name"=>"keywords","content"=>$data['title']));
 $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝提供性感美女高清图片-".$data['title']."。www.xihuanbaobei.com"));
+$this->params['current'] = $current;
 ?>
 <div class="main">
      <div class="mbx">当前位置：<a href="<?php echo CEnv::HOST_WWW;?>">喜欢宝贝</a> &gt; <a href="<?php echo CEnv::HOST_WWW;?>/<?php echo $cate['url'];?>"><?php echo $cate['name'];?></a>&gt; <?php echo $data['title'];?></div>
@@ -10,7 +11,7 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝提�
           <div class="pic_img">
                <center>
                     <?php if($next<=$counts){?>
-                    <a href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $id."_".$next;?>.html"><img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>"></a>
+                    <a href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $id."_".$next;?>.html" title="<?php echo $data['title'];?>"><img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>"></a>
                     <?php }else{ ?>
                          <img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>">
                     <?php } ?>

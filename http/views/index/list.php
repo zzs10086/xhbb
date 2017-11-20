@@ -3,10 +3,14 @@
 $this->title = $title;
 $this->registerMetaTag(array("name"=>"keywords","content"=>$keywords));
 $this->registerMetaTag(array("name"=>"description","content"=>$description));
+$this->params['current'] = $current;
 ?>
 <div class="tj"></div>
 
 <div class="main">
+     <div class="listmbx">
+          <div class="posit">当前位置：<a href="<?php echo CEnv::HOST_WWW;?>">喜欢宝贝</a> &gt; <a href="<?php echo CEnv::HOST_WWW;?>/<?php echo $category_url;?>"><?php echo $category_name;?></a></div>
+     </div>
      <div class="pic-list mb20 list">
           <ul>
                <?php foreach ($list['list'] as $k=>$v){?>

@@ -26,6 +26,7 @@ class IndexController extends BaseController
      public function actionIndex()
      {
 
+
           //轮播
           $foucs =$this->getFoucs(6);
           //今日更新
@@ -36,11 +37,16 @@ class IndexController extends BaseController
           $chest = $this->getArticleByCategory(2);
           //美臀
           $meitun = $this->getArticleByCategory(8);
-          //丝袜
-          $siwai = $this->getArticleByCategory(3);
+          //美腿
+          $siwai = $this->getArticleByCategory(9);
           //制服
           $zhifu = $this->getArticleByCategory(7);
-
+          //气质女神
+          $nvshen = $this->getArticleByCategory(5);
+          //模特
+          $xiezhen = $this->getArticleByCategory(12);
+          //模特
+          $mote = $this->getArticleByCategory(1);
 
           return $this->render('index', [
                'sex'=>$sex,
@@ -50,6 +56,10 @@ class IndexController extends BaseController
                'new'=>$new,
                'foucs'=>$foucs,
                'zhifu'=>$zhifu,
+               'nvshen'=>$nvshen,
+               'xiezhen'=>$xiezhen,
+               'mote'=>$mote,
+               'current'=>'index'
           ]);
      }
 
@@ -75,6 +85,7 @@ class IndexController extends BaseController
                'description'=>'性感美女频道提供各类顶级美女机构性感美女图片，如推女郎、秀人网、ROSI等众多性感美女写真及大胆日本美女艺术套图。',
                'category_name'=>'性感',
                'category_url'=>'xinggan',
+               'current'=>'xinggan'
           ];
 
           return $this->render('list', $data);
@@ -96,6 +107,7 @@ class IndexController extends BaseController
               'description'=>'丰乳频道提供各类丰乳,大胸，大奶美女图片。',
               'category_name'=>'丰乳',
               'category_url'=>'fengru',
+               'current'=>'fengru'
           ];
           return $this->render('list', $data);
      }
@@ -116,6 +128,7 @@ class IndexController extends BaseController
               'description'=>'翘臀频道提供各类翘臀,美臀,肥臀美女图片。',
               'category_name'=>'翘臀',
               'category_url'=>'qiaotun',
+              'current'=>'qiaotun'
           ];
           return $this->render('list', $data);
      }
@@ -136,6 +149,7 @@ class IndexController extends BaseController
               'description'=>'美腿频道提供各类美腿,丝袜,黑丝,长腿美女图片。',
               'category_name'=>'美腿',
               'category_url'=>'meitui',
+               'current'=>'meitui'
           ];
           return $this->render('list', $data);
      }
@@ -157,6 +171,7 @@ class IndexController extends BaseController
               'description'=>'女神频道提供各类女神,清纯,漂亮,气质美女图片。',
               'category_name'=>'女神',
               'category_url'=>'nvshen',
+               'current'=>'nvshen'
           ];
           return $this->render('list', $data);
      }
@@ -177,6 +192,7 @@ class IndexController extends BaseController
               'description'=>'制服频道提供各类制服,女仆,校服,情趣内衣图片。',
               'category_name'=>'制服',
               'category_url'=>'zhifu',
+               'current'=>'zhifu'
           ];
 
           return $this->render('list', $data);
@@ -199,6 +215,29 @@ class IndexController extends BaseController
               'description'=>'写真频道提供各类写真,旗袍,国模,性感写真套图图片。',
               'category_name'=>'写真',
               'category_url'=>'xiezhen',
+               'current'=>'xiezhen'
+          ];
+          return $this->render('list', $data);
+     }
+
+     /**
+      * mote
+      * @return string
+      */
+     public function actionMote()
+     {
+          $cid = 1;
+          $page = Yii::$app->request->get('page', 1);
+          $res = $this->getList($cid,$page);
+
+          $data = [
+               'list'=>$res,
+               'title'=>'模特_车模_人体模特_漂亮模特 - 喜欢宝贝',
+               'keywords'=>'模特,车模,人体模特,漂亮模特',
+               'description'=>'写真频道提供各类模特,车模,人体模特,漂亮模特套图图片。',
+               'category_name'=>'模特',
+               'category_url'=>'mote',
+               'current'=>'mote'
           ];
           return $this->render('list', $data);
      }
@@ -213,6 +252,7 @@ class IndexController extends BaseController
                5=> array('name'=>'女神','url'=>'nvshen'),
                7=> array('name'=>'制服','url'=>'zhifu'),
                12=> array('name'=>'写真','url'=>'xiezhen'),
+               1=> array('name'=>'模特','url'=>'mote'),
           );
           $cid = 10;
           $id = Yii::$app->request->get('id', 1);
@@ -245,7 +285,7 @@ class IndexController extends BaseController
                'preArticle'=>$preArticle,
                'nextArticle'=>$nextArticle,
                'cate'=>$cate[$category_id],
-
+               'current'=>$cate[$category_id]['url']
           ]);
      }
      //前一篇
@@ -261,7 +301,7 @@ class IndexController extends BaseController
       *
       * 分类下的列表
       */
-     public function getList($cid, $page=1, $limit=16){
+     public function getList($cid, $page=1, $limit=24){
 
           $offset = ($page-1)*$limit;
 
@@ -277,7 +317,7 @@ class IndexController extends BaseController
                'id' => SORT_DESC
           ]);
           $pagination = new Pagination(['totalCount' => $count]);
-          $pagination->setPageSize(20);
+          $pagination->setPageSize($limit);
           $list = $query->offset($pagination->offset)
                ->limit($pagination->limit)
                ->all();

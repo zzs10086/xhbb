@@ -30,23 +30,23 @@ AppAsset::register($this);
         <div class="logo"><a href="<?php echo CEnv::HOST_WWW;?>"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="喜欢宝贝"></a></div>
         <div class="nav">
             <ul>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>">首页</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>" <?php if($this->params['current'] == 'index') echo 'class="on"';?>>首页</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/xinggan">性感</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/xinggan" <?php if($this->params['current'] == 'xinggan') echo 'class="on"';?>>性感</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/fengru">丰乳</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/fengru" <?php if($this->params['current'] == 'fengru') echo 'class="on"';?>>丰乳</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/qiaotun">翘臀</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/qiaotun" <?php if($this->params['current'] == 'qiaotun') echo 'class="on"';?>>翘臀</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/meitui">美腿</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/meitui" <?php if($this->params['current'] == 'meitui') echo 'class="on"';?>>美腿</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/nvshen">女神</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/nvshen" <?php if($this->params['current'] == 'nvshen') echo 'class="on"';?>>女神</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/zhifu">制服</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/zhifu" <?php if($this->params['current'] == 'zhifu') echo 'class="on"';?>>制服</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/xiezhen">写真</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/xiezhen" <?php if($this->params['current'] == 'xiezhen') echo 'class="on"';?>>写真</a></li>
                 <li class="line"></li>
-                <li><a href="<?php echo CEnv::HOST_WWW;?>/mote">模特</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/mote" <?php if($this->params['current'] == 'mote') echo 'class="on"';?>>模特</a></li>
             </ul>
         </div>
     </div>

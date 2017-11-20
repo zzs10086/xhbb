@@ -15,6 +15,7 @@ return [
     'nvshen' => 'index/nvshen',
     'zhifu' => 'index/zhifu',
     'xiezhen' => 'index/xiezhen',
+    'mote' => 'index/mote',
 
 
 ];

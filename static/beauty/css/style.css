@@ -31,7 +31,8 @@ a{color:#666; text-decoration:none;}
 .nav ul li{float:left; width:87px; height:53px; line-height:50px;}
 .nav ul li.line{width:2px; height:53px; background:url(../images/nav_line.png) no-repeat;}
 .nav ul li a{width:87px; height:53px; text-align:center; display:block; color:#ccc;}
-.nav ul li a:hover{background:#404040; height:50px;}
+.nav ul li a:hover{background:#404040; height:50px; color: #fff;}
+.nav ul li a.on{background:#ff0084; height:50px; color: #fff;}
 .nav ul li.hover a,.nav ul li.hover a:hover{background:url(../images/nav_a_h.png) repeat-x; width:87px; height:53px; color:#fff;}
 
 .index-box{width:1000px; height:340px; padding-top:20px; margin:0 auto; overflow:hidden;}
@@ -79,6 +80,9 @@ a{color:#666; text-decoration:none;}
 .pagination li{
     float: left; margin-left: 5px;
 }
+.pages span{
+    height:32px;padding:6px 14px; background:#eee; border:1px solid #e0e0e0; border-radius:2px;color:#333;
+}
 .pages a{font-family:"\5b8b\4f53";display:inline-block; height:32px; text-align:center; padding:0 14px;  background:#fff; border:1px solid #e0e0e0;
     border-radius:2px;color:#666;
     background:-moz-linear-gradient(top, #ffffff, #eaeaea); /* Firefox */
@@ -98,6 +102,12 @@ a{color:#666; text-decoration:none;}
 .flinks{margin:25px 0 15px;}
 .flinks b{margin:0 17px;font-family: "\5b8b\4f53";}
 
+.listmbx{
+    margin:5px 0px 10px; background-color: #fff; width: 998px;border: 1px solid #ddd;
+}
+.listmbx .posit{
+  margin: 0px 0px 0px 10px; background-color: #fff; width: 988px; height: 30px; line-height: 30px;
+}
 .mbx{
  margin:10px 0px;
 }

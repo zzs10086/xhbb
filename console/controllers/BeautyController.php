@@ -52,20 +52,52 @@ class BeautyController extends Controller{
     //http://www.169b.com/
     const MEINV_CATEGORY = [
 
-        /*1 => 'http://www.169b.com/mote/meinvchemo/',//车模
-        2 => 'http://www.169b.com/xiongbu/daxiong/',//'美胸'
-        3 => 'http://www.169b.com/siwameinv/siwayouhuo/',//丝袜
-        4 => 'http://www.169b.com/qunzhuangmeinv/qipaomeinv/',//'旗袍'
-        5 => 'http://www.169b.com/gexingmeinv/piaoliang/',//'女神',
-        6 => 'http://www.169b.com/gexingmeinv/qingchun/',//清纯
-        7 => 'http://www.169b.com/meinvyouhuo/xuesheng/',//制服
-        8 => 'http://www.169b.com/meitun/feitunjutun/',//'美臀',
-        9 => 'http://www.169b.com/siwameinv/meitui/',//美腿
-        10 =>'http://www.169b.com/xingganmeinv/zhongguomeinv/',//性感
-        11 =>'http://www.169b.com/gexingmeinv/qizhi/',//气质
-        12 =>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//写真*/
+        /*10=>'http://www.169b.com/xingganmeinv/hanguomeinv/',//韩国性感
+        10=>'http://www.169b.com/xingganmeinv/ribenmeinv/',//日本性感
+        10=>'http://www.169b.com/xingganmeinv/zhongguomeinv/',//中国性感
+        10=>'http://www.169b.com/xingganmeinv/meiguomeinv/',//美国性感
+        10=>'http://www.169b.com/xingganmeinv/yindumeinv/',//印度性感
+        10=>'http://www.169b.com/xingganmeinv/taiguomeinv/',//泰国性感
+        10=>'http://www.169b.com/xingganmeinv/chaoxianmeinv/',//朝鲜性感
+        10=>'http://www.169b.com/xingganmeinv/yuenanmeinv/',//越南性感
+        10=>'http://www.169b.com/xingganmeinv/hunxuemeinv/',//混血性感
+        10=>'http://www.169b.com/xingganmeinv/wukelanmeinv/',//乌克兰性感
+        10=>'http://www.169b.com/gexingmeinv/fengsao/',//风骚女神
+        2=>'http://www.169b.com/xiongbu/dixiong/',//低胸诱惑
+        2=>'http://www.169b.com/xiongbu/daxiong/',//大胸诱惑
+        8=>'http://www.169b.com/meitun/qiaotun/',//翘臀美女
+        8=>'http://www.169b.com/meitun/feitunjutun/',//肥臀美女
+        8=>'http://www.169b.com/meitun/xinggantunbu/',//性感臀部
+        9=>'http://www.169b.com/siwameinv/meitui/',//美腿
+        9=>'http://www.169b.com/siwameinv/siwayouhuo/',//美腿
+        5=>'http://www.169b.com/gexingmeinv/qingchun/',//青春女神
+        5=>'http://www.169b.com/gexingmeinv/shunv/',//熟女女神
+        5=>'http://www.169b.com/gexingmeinv/sifang/',//私房女神
+        5=>'http://www.169b.com/gexingmeinv/yaorao/',//妖娆女神
+        5=>'http://www.169b.com/gexingmeinv/qizhi/',//气质女神
+        5=>'http://www.169b.com/gexingmeinv/fengman/',//丰满女神
+        7=>'http://www.169b.com/meinvyouhuo/xuesheng/',//学生制服
+        7=>'http://www.169b.com/meinvyouhuo/nvpushaofu/',//女仆制服
+        7=>'http://www.169b.com/meinvyouhuo/ol/',//办公秘书
+        7=>'http://www.169b.com/meinvyouhuo/kongjietupian/',//空姐
+        7=>'http://www.169b.com/meinvyouhuo/jingfu/',//警服
+        7=>'http://www.169b.com/meinvyouhuo/kunbang/',//捆绑
+        7=>'http://www.169b.com/meinvyouhuo/hushi/',//护士
+        7=>'http://www.169b.com/meinvyouhuo/tunvlang/',//兔女郎
+        1=>'http://www.169b.com/mote/meinvchemo/',//美女车模
+        1=>'http://www.169b.com/mote/eluosimote/',//俄罗斯模特
+        1=>'http://www.169b.com/mote/oumeimote/',//欧美模特
+        1=>'http://www.169b.com/mote/zhongguomote/',//中国模特
+        1=>'http://www.169b.com/mote/ribenmote/',//日本模特
+        1=>'http://www.169b.com/mote/hanguomote/',//韩国模特
+        12=>'http://www.169b.com/qingjingzhaopian/jiepaimeinv/',//街拍写真
+        12=>'http://www.169b.com/qunzhuangmeinv/qipaomeinv/',//旗袍写真
+        12=>'http://www.169b.com/qunzhuangmeinv/diaodaiqunmeinv/',//吊带裙
+        12=>'http://www.169b.com/qunzhuangmeinv/shuiqunmeinv/',//睡裙
+        12=>'http://www.169b.com/qunzhuangmeinv/duanqunmeinv/',//短裙
+        12=>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//长裙*/
+        12=>'http://www.169b.com/qingjingzhaopian/huwaimeinv/',//户外美女
 
-        10=>'http://www.169b.com/xingganmeinv/hanguomeinv/',//性感
     ];
 
     public function actionGuzzle(){
