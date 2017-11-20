@@ -95,8 +95,9 @@ class BeautyController extends Controller{
         12=>'http://www.169b.com/qunzhuangmeinv/diaodaiqunmeinv/',//吊带裙
         12=>'http://www.169b.com/qunzhuangmeinv/shuiqunmeinv/',//睡裙
         12=>'http://www.169b.com/qunzhuangmeinv/duanqunmeinv/',//短裙
-        12=>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//长裙*/
-        12=>'http://www.169b.com/qingjingzhaopian/huwaimeinv/',//户外美女
+        12=>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//长裙
+        12=>'http://www.169b.com/qingjingzhaopian/huwaimeinv/',//户外美女*/
+        12=>'http://www.169b.com/gexingmeinv/guzhuang/',//古装
 
     ];
 
