@@ -27,24 +27,24 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="header">
     <div class="hd_w">
-        <div class="logo"><a href="http://www.xihuanbaobei.com"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="喜欢宝贝"></a></div>
+        <div class="logo"><a href="<?php echo CEnv::HOST_WWW;?>"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="喜欢宝贝"></a></div>
         <div class="nav">
             <ul>
                 <li><a href="/">首页</a></li>
                 <li class="line"></li>
-                <li><a href="/xinggan">性感</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/xinggan">性感</a></li>
                 <li class="line"></li>
-                <li><a href="/fengru">丰乳</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/fengru">丰乳</a></li>
                 <li class="line"></li>
-                <li><a href="/qiaotun">翘臀</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/qiaotun">翘臀</a></li>
                 <li class="line"></li>
-                <li><a href="/meitui">美腿</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/meitui">美腿</a></li>
                 <li class="line"></li>
-                <li><a href="/nvshen">女神</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/nvshen">女神</a></li>
                 <li class="line"></li>
-                <li><a href="/zhifu">制服</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/zhifu">制服</a></li>
                 <li class="line"></li>
-                <li><a href="/xiezhen">写真</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/xiezhen">写真</a></li>
                 <li class="line"></li>
             </ul>
         </div>
