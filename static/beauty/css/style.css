@@ -174,3 +174,6 @@ a{color:#666; text-decoration:none;}
 .guess ul li span{
     display: block;
 }
+.pic_img{position: relative;}
+.y_left{position: absolute; left: 0px; top: 50%; margin-top: -15px; z-index: 500;}
+.y_right{position: absolute; right: 0px; top: 50%; margin-top: -15px; z-index: 500;}

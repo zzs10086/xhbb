@@ -4,13 +4,19 @@ $this->registerMetaTag(array("name"=>"keywords","content"=>"乳神,丰乳肥臀"
 $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝提供性感美女高清图片-".$data['title']."。www.xihuanbaobei.com"));
 ?>
 <div class="main">
-     <div class="mbx">当前位置：<a href="/">喜欢宝贝</a> &gt; <a href="/mei/xinggan/">性感美女</a>&gt; <?php echo $data['title'];?></div>
+     <div class="mbx">当前位置：<a href="/">喜欢宝贝</a> &gt; <a href="/xinggan">性感美女</a>&gt; <?php echo $data['title'];?></div>
      <div class="pic_box">
           <div class="pic_title"></div>
           <div class="pic_img">
                <center>
-                    <img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>">
+                    <?php if($next<=$counts){?>
+                    <a href="/show/<?php echo $id."_".$next;?>.html"><img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>"></a>
+                    <?php }else{ ?>
+                         <img alt="<?php echo $data['title'];?>" src="<?php echo $imgurl;?>">
+                    <?php } ?>
                </center>
+               <?php if($pre>=1){?><div class="y_left"><a href="/show/<?php echo $id."_".$pre;?>.html"><img src="<?php echo CEnv::STATIC_RESOURCE;?>/beauty/images/y_189.png"></a></div><?php } ?>
+               <?php if($next<=$counts){?><div class="y_right"><a href="/show/<?php echo $id."_".$next;?>.html"><img src="<?php echo CEnv::STATIC_RESOURCE;?>/beauty/images/y_190.png"></a></div><?php } ?>
           </div>
 
      </div>
@@ -36,7 +42,7 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝提�
                <li>
                     <a href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>" target="_blank">
                          <img src="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="140" height="210">
-                         <span>极品美女胸模孟狐狸秀纹身第二季</span>
+                         <span><?php echo $v['title'];?></span>
                     </a>
                </li>
                <?php }?>
