@@ -182,7 +182,7 @@ a{color:#666; text-decoration:none;}
     margin: 5px;
 }
 .guess ul li span{
-    display: block;
+    display: block; width: 150px; overflow: hidden; height: 25px; line-height: 25px;
 }
 .pic_img{position: relative;}
 .y_left{position: absolute; left: 0px; top: 50%; margin-top: -15px; z-index: 500;}
