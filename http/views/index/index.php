@@ -10,7 +10,7 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <div class="content" id="main-slide" style="width: 745px; height: 340px;">
                     <div class="changeDiv">
                          <?php foreach ($foucs as $k=>$v){?>
-                         <a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>" style="display: none;"><img src="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="745" height="340"></a>
+                         <a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>" style="display: none;"><img src="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="745" height="340"></a>
                          <?php } ?>
                     </div>
                     <div class="title-bg" style="width: 745px;"></div>
@@ -22,7 +22,7 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
           <div class="title-a"> <h2>今日最新</h2></div>
           <ul class="d1">
                <?php foreach ($new as $k=>$v){?>
-               <li> <a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a> </li>
+               <li> <a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a> </li>
                <?php } ?>
               </ul>
      </div>
@@ -37,9 +37,9 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <?php foreach ($sex as $k=>$v){?>
                <li>
                     <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                         <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                         <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
                     </div>
-                    <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                    <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                </li>
                <?php } ?>
 
@@ -52,9 +52,9 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <?php foreach ($chest as $k=>$v){?>
                     <li>
                          <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                              <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                              <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
                          </div>
-                         <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                         <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                     </li>
                <?php } ?>
           </ul>
@@ -66,9 +66,9 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <?php foreach ($meitun as $k=>$v){?>
                     <li>
                          <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                              <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                              <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
                          </div>
-                         <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                         <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                     </li>
                <?php } ?>
           </ul>
@@ -80,9 +80,9 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <?php foreach ($zhifu as $k=>$v){?>
                     <li>
                          <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                              <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                              <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
                          </div>
-                         <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                         <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                     </li>
                <?php } ?>
           </ul>
@@ -94,9 +94,9 @@ $this->registerMetaTag(array("name"=>"description","content"=>"喜欢宝贝网�
                <?php foreach ($siwai as $k=>$v){?>
                     <li>
                          <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                              <div style="top: 0px;"><b><a target="_blank" href="/show/<?php echo $v['id'];?>.html"></a></b></div>
+                              <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
                          </div>
-                         <div class="name"><a target="_blank" href="/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
+                         <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                     </li>
                <?php } ?>
           </ul>

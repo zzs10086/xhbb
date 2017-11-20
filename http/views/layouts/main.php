@@ -30,7 +30,7 @@ AppAsset::register($this);
         <div class="logo"><a href="<?php echo CEnv::HOST_WWW;?>"><img src="<?php echo \CEnv::STATIC_RESOURCE.'/beauty/images/logo.png';?>" height="48" width="122" alt="喜欢宝贝"></a></div>
         <div class="nav">
             <ul>
-                <li><a href="/">首页</a></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>">首页</a></li>
                 <li class="line"></li>
                 <li><a href="<?php echo CEnv::HOST_WWW;?>/xinggan">性感</a></li>
                 <li class="line"></li>
