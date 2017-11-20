@@ -62,8 +62,10 @@ class BeautyController extends Controller{
         8 => 'http://www.169b.com/meitun/feitunjutun/',//'美臀',
         9 => 'http://www.169b.com/siwameinv/meitui/',//美腿
         10 =>'http://www.169b.com/xingganmeinv/zhongguomeinv/',//性感
-        11 =>'http://www.169b.com/gexingmeinv/qizhi/',//气质*/
-        12 =>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//写真
+        11 =>'http://www.169b.com/gexingmeinv/qizhi/',//气质
+        12 =>'http://www.169b.com/qunzhuangmeinv/changqunlifu/',//写真*/
+
+        10=>'http://www.169b.com/xingganmeinv/hanguomeinv/',//性感
     ];
 
     public function actionGuzzle(){

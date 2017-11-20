@@ -46,6 +46,7 @@ AppAsset::register($this);
                 <li class="line"></li>
                 <li><a href="<?php echo CEnv::HOST_WWW;?>/xiezhen">写真</a></li>
                 <li class="line"></li>
+                <li><a href="<?php echo CEnv::HOST_WWW;?>/mote">模特</a></li>
             </ul>
         </div>
     </div>
