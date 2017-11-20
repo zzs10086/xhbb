@@ -17,7 +17,7 @@ $this->params['current'] = $current;
                <li>
 
                     <div class="picbox"><img data-original="<?php echo $v['pic_url'];?>" alt="<?php echo $v['title'];?>" width="235" height="350" src="<?php echo $v['pic_url'];?>" style="display: inline;">
-                         <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html"></a></b></div>
+                         <div style="top: 0px;"><b><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"></a></b></div>
                     </div>
                     <div class="name"><a target="_blank" href="<?php echo CEnv::HOST_WWW;?>/show/<?php echo $v['id'];?>.html" title="<?php echo $v['title'];?>"><?php echo $v['title'];?></a></div>
                </li>
