@@ -14,7 +14,17 @@ return [
             'csrfParam' => '_csrf-http',
         ],
         'urlManager' => [
-            'rules' => require(__DIR__ . '/rule.php'),
+              'rules' => require(__DIR__ . '/rule.php'),
+              'enablePrettyUrl' => true,
+              'showScriptName' => false,
+              'enableStrictParsing' => true,
+              //'suffix' => '.html',
+               /*'rules' => [
+                   '<controller:\w+>/<action:\w+>/<page:\d+>' => '<controller>/<action>',
+                    "<controller:\w+>/<action:\w+>"=>"<controller>/<action>",
+               ],*/
+            //'enablePrettyUrl' => true,
+            //'showScriptName' => false,
         ],
     ],
     'params' => $params,

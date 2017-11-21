@@ -316,7 +316,8 @@ class IndexController extends BaseController
           $query->orderBy([
                'id' => SORT_DESC
           ]);
-          $pagination = new Pagination(['totalCount' => $count]);
+          //$pagination = new Pagination(['totalCount' => $count,'pageSizeParam' => false,'validatePage' => false,'pageParam' => 'p']);
+          $pagination = new Pagination(['totalCount' => $count,'pageSizeParam' => false,'validatePage' => false]);
           $pagination->setPageSize($limit);
           $list = $query->offset($pagination->offset)
                ->limit($pagination->limit)
