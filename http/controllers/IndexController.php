@@ -326,7 +326,7 @@ class IndexController extends BaseController
           $data =  [
                'pagination' => $pagination,
                'list' => $list,
-               'total' => $count
+               'total' => $count,
           ];
           return $data;
      }

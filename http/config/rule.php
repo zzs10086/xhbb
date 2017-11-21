@@ -10,8 +10,8 @@ return [
     'show/<id:\d+>.html' => 'index/show',
     'show/<id:\d+>_<page:\d+>.html' => 'index/show',
 
-    'xinggan/<page:\d+>.html' => 'index/xinggan',
-    'xinggan/' => 'index/xinggan',
+    '/xinggan/<page:\d+>.html' => 'index/xinggan',
+    '/xinggan/' => 'index/xinggan',
 
     'fengru/<page:\d+>.html' => 'index/fengru',
     'fengru/' => 'index/fengru',

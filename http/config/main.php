@@ -5,7 +5,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => CEnv::HOST_API,
+    'id' => CEnv::HOST_WWW,
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'http\controllers',
