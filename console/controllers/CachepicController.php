@@ -27,7 +27,12 @@ class CachepicController extends Controller{
            $res = ByArticlePic::find()->select(['pic_url'])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->column();
            if(!$res) break;
 
-           
+           foreach ($res as $k=>$v){
+
+               file_get_contents($v);
+               sleep(0.5);
+               echo 'end';
+           }
             echo '<pre>'; print_r($res);exit;
         }
     }
