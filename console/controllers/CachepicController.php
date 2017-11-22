@@ -19,13 +19,16 @@ class CachepicController extends Controller{
 
     public function actionCache(){
 
-        $limit = 1000;
+        $limit = 10;
         for ($i=1; $i<100; $i++){
 
            $offset = ($i-1)*$limit;
 
-           $res = ByArticlePic::find()->select(['pic_url'])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->all();
-           echo '<pre>'; print_r($res);exit;
+           $res = ByArticlePic::find()->select(['pic_url'])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->column();
+           if(!$res) break;
+
+           
+            echo '<pre>'; print_r($res);exit;
         }
     }
 }
