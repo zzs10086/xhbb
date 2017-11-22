@@ -19,7 +19,7 @@ class CachepicController extends Controller{
 
     public function actionCache(){
 
-        $limit = 10;
+        $limit = 1000;
         for ($i=1; $i<100; $i++){
 
            $offset = ($i-1)*$limit;
@@ -31,9 +31,9 @@ class CachepicController extends Controller{
 
                file_get_contents($v);
                sleep(0.5);
-               echo 'end';
            }
-            echo '<pre>'; print_r($res);exit;
+            echo "=================the num.".$i."============";
         }
+        echo 'end';
     }
 }
