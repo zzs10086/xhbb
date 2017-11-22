@@ -24,7 +24,7 @@ class CachepicController extends Controller{
 
            $offset = ($i-1)*$limit;
 
-           $res = ByArticlePic::find()->select(['pic_url'])->offset($offset)->limit($limit)->asArray()->orderBy('id desc')->column();
+           $res = ByArticlePic::find()->select(['pic_url'])->offset($offset)->limit($limit)->asArray()->orderBy('id asc')->column();
            if(!$res) break;
 
            foreach ($res as $k=>$v){
@@ -32,8 +32,8 @@ class CachepicController extends Controller{
                file_get_contents($v);
                sleep(0.5);
            }
-            echo "=================the num.".$i."============";
+            //echo "=================the num.".$i."============";
         }
-        echo 'end';
+        //echo 'end';
     }
 }
