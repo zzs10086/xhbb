@@ -7,7 +7,7 @@
  */
 
 echo '认证成功，开始更新';
-echo exec("/home/sh/github_pull.sh");
+echo shell_exec("/home/sh/github_pull.sh");
 
 echo date("Y-m-d H:i:s");
 /*$github_signa = $_SERVER['HTTP_X_HUB_SIGNATURE'];
