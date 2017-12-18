@@ -1,5 +1,4 @@
 <?php
-exit;
 require(__DIR__ . '/../../common/components/CEnv.php');
 
 require(__DIR__ . '/../../vendor/autoload.php');
