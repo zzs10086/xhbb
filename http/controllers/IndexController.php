@@ -22,10 +22,10 @@ use Yii;
 class IndexController extends BaseController
 {
 
+     CONST EXPIRE_TIME = 3600;
 
      public function actionIndex()
      {
-
 
           //轮播
           $foucs =$this->getFoucs(6);
@@ -64,7 +64,15 @@ class IndexController extends BaseController
      }
 
      private function getFoucs($limit){
-          $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1,'is_foucs'=>1])->limit($limit)->asArray()->orderBy('id desc')->all();
+
+          $key = "index:foucs";
+
+          $data = Yii::$app->redis->get($key);
+          if(!$data){
+               $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1,'is_foucs'=>1])->limit($limit)->asArray()->orderBy('id desc')->all();
+               Yii::$app->redis->set($key,$data,self::EXPIRE_TIME);
+          }
+
           return $data;
      }
      /**
@@ -333,13 +341,28 @@ class IndexController extends BaseController
 
      //今日更新
      private function getArticleNew($limit =10){
-          $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1])->limit($limit)->asArray()->orderBy('id desc')->all();
+
+          $key = "index:getArticleNew_".$limit;
+
+          $data = Yii::$app->redis->get($key);
+          if(!$data){
+               $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1])->limit($limit)->asArray()->orderBy('id desc')->all();
+               Yii::$app->redis->set($key,$data,self::EXPIRE_TIME);
+          }
           return $data;
      }
 
      private function getArticleByCategory($cid, $limit = 4){
-          $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1, 'category_id'=>$cid])->limit($limit)->asArray()->orderBy('id desc')->all();
-          return $data;
+
+          $key = "index:getArticleByCategory_".$cid.'_'.$limit;
+
+          $data = Yii::$app->redis->get($key);
+          if(!$data){
+               $data = ByArticle::find()->select(['id','title','pic_url'])->where(['status' => 1, 'category_id'=>$cid])->limit($limit)->asArray()->orderBy('id desc')->all();
+               Yii::$app->redis->set($key,$data,self::EXPIRE_TIME);
+          }
+
+         return $data;
      }
 
 

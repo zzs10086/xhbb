@@ -10,11 +10,14 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
         'redis' => [
-            'class' => 'yii\redis\Connection',
-            'hostname' => CEnv::REDIS_HOST,
-            'port' => CEnv::REDIS_PORT,
-            'password' => CEnv::REDIS_PASS,
-            'database' => CEnv::REDIS_DATA_BASE,
+            'class' => 'yii\redis\Cache',
+            'redis' => [
+                'hostname' => CEnv::REDIS_HOST,
+                'port' => CEnv::REDIS_PORT,
+                'password' => CEnv::REDIS_PASS,
+                'database' => CEnv::REDIS_DATA_BASE,
+              ],
+
         ],
         'session' => [
             'name' => 'checheng',
