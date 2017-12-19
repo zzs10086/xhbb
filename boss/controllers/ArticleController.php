@@ -98,5 +98,70 @@ class ArticleController extends Controller
 
     }
 
+    /**
+     * @return string
+     * 分类列表
+     * @wanghui
+     */
+    public function actionCategory()
+    {
+        //分页数据
+        $query = Category::find();
+
+        if ($title = Yii::$app->request->get('title')) {
+            $query->andWhere(['like', 'title', $title]);
+        }
+
+        if ($list_status = Yii::$app->request->get('list_status')) {
+            if(! empty($list_status)) {
+                $query->andWhere(['status' => $list_status]);
+            }
+        }
+        $count = $query->count();
+
+        $query->orderBy([
+             'status'=>SORT_ASC,
+             'id' => SORT_DESC
+        ]);
+
+        $pagination = new Pagination(['totalCount' => $count]);
+        $pagination->setPageSize(20);
+
+        $category = $query->offset($pagination->offset)
+             ->limit($pagination->limit)
+             ->all();
+        return $this->render('category_list', [
+             'pagination' => $pagination,
+             'list' => $category,
+             'total_count' => $count
+        ]);
+    }
+
+    /**
+     * 修改分类
+     * @param $id
+     * @return string
+     * @wanghui
+     */
+    public function actionCategoryedit($id){
+        $model = Category::findOne($id);
+        if(Yii::$app->request->isPost){
+            $model->load(Yii::$app->request->post());
+            if ($model->validate()) {
+                if($model->save()){
+                    $this->redirect(['/article/category']);
+                }
+            }
+        }
+
+        return $this->render('category_edit', [
+             'model' => $model,
+        ]);
+
+
+    }
+
+
+
 
 }

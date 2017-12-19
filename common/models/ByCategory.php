@@ -15,6 +15,11 @@ use Yii;
  */
 class ByCategory extends \yii\db\ActiveRecord
 {
+    //状态
+    public static  $status_array = [
+         1=>'可用',
+         2=>'不可用'
+    ];
     /**
      * @inheritdoc
      */
