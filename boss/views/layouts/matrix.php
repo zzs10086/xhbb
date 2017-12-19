@@ -102,6 +102,13 @@ $this->beginPage();
 
             </ul>
         </li>
+        <li class="submenu"><a href="index.html"><i class="icon icon-home"></i> <span>会员管理</span><span class="label label-important">2</span></a>
+            <ul>
+                <li><a href="/user/list">会员列表</a></li>
+                <li><a href="/article/list">图片列表</a></li>
+
+            </ul>
+        </li>
         <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
         <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
         <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>

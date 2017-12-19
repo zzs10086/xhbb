@@ -16,6 +16,12 @@ use Yii;
  */
 class ByUser extends \yii\db\ActiveRecord
 {
+
+    //状态
+    public static  $status_array = [
+         1=>'可用',
+         2=>'不可用'
+    ];
     /**
      * @inheritdoc
      */
@@ -37,9 +43,9 @@ class ByUser extends \yii\db\ActiveRecord
     {
         return [
             [['expire_time'], 'safe'],
-            [['openid', 'unionid', 'wx_name'], 'string', 'max' => 50],
+            [['openid', 'unionid', 'user_name'], 'string', 'max' => 50],
             [['head_img'], 'string', 'max' => 255],
-            [['read_count'], 'integer'],
+            [['status'], 'integer'],
             [['openid'], 'unique'],
         ];
     }
@@ -54,8 +60,9 @@ class ByUser extends \yii\db\ActiveRecord
             'openid' => 'Openid',
             'unionid' => 'Unionid',
             'head_img' => 'Head Img',
-            'wx_name' => 'Wx Name',
+            'user_name' => 'User Name',
             'expire_time' => 'Expire Time',
+            'status' => 'Status',
         ];
     }
 }

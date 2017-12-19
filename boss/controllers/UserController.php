@@ -12,7 +12,7 @@ use common\models\ByUser as User;
  */
 class UserController extends Controller
 {
-    public $layout = '@app/views/layouts/boss.php';
+    public $layout = '@app/views/layouts/matrix.php';
     /**
      * @inheritdoc
      */
@@ -56,8 +56,8 @@ class UserController extends Controller
         if ($openid = Yii::$app->request->get('openid')) {
                 $query->andWhere(['openid' => $openid]);
         }
-        if ($wx_name = Yii::$app->request->get('wx_name')) {
-            $query->andWhere(['wx_name' => $wx_name]);
+        if ($user_name = Yii::$app->request->get('user_name')) {
+            $query->andWhere(['user_name' => $user_name]);
         }
         if ($expire_time = Yii::$app->request->get('expire_time')) {
             $query->andWhere(['is_forever' => 2]);
@@ -77,7 +77,7 @@ class UserController extends Controller
              ->all();
         return $this->render('list', [
              'pagination' => $pagination,
-             'users' => $users,
+             'list' => $users,
              'total_user' => $count
         ]);
     }
