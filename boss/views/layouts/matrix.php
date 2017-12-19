@@ -95,14 +95,14 @@ $this->beginPage();
 <!--sidebar-menu-->
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
     <ul>
-        <li class="submenu active"><a href="index.html"><i class="icon icon-home"></i> <span>图片管理</span><span class="label label-important">2</span></a>
+        <li class="submenu <?php echo $this->params['menu'] == 'article'?'active' :'';?>"><a href="index.html"><i class="icon icon-home"></i> <span>图片管理</span><span class="label label-important">2</span></a>
             <ul>
                 <li><a href="/article/category">分类列表</a></li>
                 <li><a href="/article/list">图片列表</a></li>
 
             </ul>
         </li>
-        <li class="submenu"><a href="index.html"><i class="icon icon-home"></i> <span>会员管理</span><span class="label label-important">2</span></a>
+        <li class="submenu <?php echo $this->params['menu'] == 'user'?'active' :'';?>"><a href="index.html"><i class="icon icon-home"></i> <span>会员管理</span><span class="label label-important">2</span></a>
             <ul>
                 <li><a href="/user/list">会员列表</a></li>
                 <li><a href="/article/list">图片列表</a></li>
