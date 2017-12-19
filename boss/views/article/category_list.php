@@ -34,12 +34,14 @@ $this->params['current_name'] = '分类列表';
                                    <tr>
                                         <td><input type="checkbox" /></td>
                                         <td><?= $value['category_name'] ?></td>
-                                        <td><img style="width:50px" src="<?= $value['pic_url'] ?>"></td>
+                                        <td><a href="<?= $value['pic_url'] ?>" title="点击看大图" target="_blank"><img style="height: 30px;" src="<?= $value['pic_url'] ?>"></a></td>
                                         <td><?= $value['sort_rank']; ?></td>
                                         <td><?= Category::$status_array[$value['status']] ?></td>
-                                        <td><a class="btn btn-sm set-to-che btn-warning" href="<?php
+                                        <td><a class="btn btn-primary btn-mini" href="<?php
                                              echo Url::to('/article/categoryedit?id=' . $value['id']);
                                              ?>">修改</a>
+                                             <a href="<?php echo CEnv::HOST_WWW .'/'.$value['ename'];?>" class="btn btn-success btn-mini" target="_blank">预览</a>
+                                             <a href="javascript:void(0);" class="btn btn-danger btn-mini"  onclick="deleteArticle(<?php /*echo $value['id'] */?>)">删除</a>
                                              <!--<a class="btn btn-sm btn-danger"
                                                           onclick="deleteArticle(<?php /*echo $value['id'] */?>)"
                                                           href="javascript:void(0);">删除</a>-->
