@@ -34,14 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_lg"><i class="icon-user"></i></span><?= $form->field($model, 'username', ['labelOptions'=>['class'=>'']])->textInput(['autofocus' => true])->label(false) ?>
+                    <?= $form->field($model, 'username', [ 'template'=>'<span class="add-on bg_lg"><i class="icon-user"></i></span>{label}{input}<span class="help-inline">{error}</span>'])->textInput(['autofocus' => true])->label(false) ?>
                 </div>
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><?= $form->field($model, 'password')->passwordInput()->label(false) ?>
+                    <?= $form->field($model, 'password',[ 'template'=>'<span class="add-on bg_ly"><i class="icon-lock"></i></span>{label}{input}<span class="help-inline">{error}</span>'])->passwordInput()->label(false) ?>
                 </div>
             </div>
         </div>
