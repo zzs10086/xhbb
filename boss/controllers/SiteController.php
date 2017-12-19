@@ -27,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','profile'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -61,7 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout='@app/views/layouts/boss.php';
+        $this->layout='@app/views/layouts/matrix.php';
         $id = Yii::$app->user->id;
         $model = User::findOne($id);
         if(Yii::$app->request->isPost){
@@ -74,6 +74,33 @@ class SiteController extends Controller
         }
         return $this->render('index',[
              'model'=>$model
+        ]);
+    }
+
+    /**
+     * 修改信息
+     * @return string
+     * @throws \yii\base\Exception
+     */
+    public function actionProfile()
+    {
+        $this->layout='@app/views/layouts/matrix.php';
+        $id = Yii::$app->user->id;
+        $model = User::findOne($id);
+
+        if(Yii::$app->request->isPost){
+            $model->load(Yii::$app->request->post());
+           
+            if ($model->validate()) {
+                $model->updatetime = date('Y-m-d H:i:s');
+                $model->real_name =$model->real_name;
+                $model->password = Yii::$app->security->generatePasswordHash($model->password);
+                $model->save();
+                return $this->redirect(['site/profile']);
+            }
+        }
+        return $this->render('profile',[
+            'model'=>$model,
         ]);
     }
 
@@ -91,7 +118,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->render('login', [
+            return $this->renderPartial('login', [
                 'model' => $model,
             ]);
         }

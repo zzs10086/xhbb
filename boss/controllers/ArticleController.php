@@ -13,7 +13,7 @@ use common\models\ByCategory as Category;
  */
 class ArticleController extends Controller
 {
-    public $layout = '@app/views/layouts/boss.php';
+    public $layout = '@app/views/layouts/matrix.php';
     /**
      * @inheritdoc
      */

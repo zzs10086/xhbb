@@ -5,7 +5,9 @@ use boss\models\User;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = '个人信息';
+$this->title = '首页';
+$this->title = '管理后台-首页';
+$this->params['current_name'] = '首页';
 ?>
 
 <div class="content-wrapper y_content-wrapper">

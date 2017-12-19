@@ -27,6 +27,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
              [['nick_name','password'], 'required','message'=>'{attribute}不能为空'],
+             [['real_name'] ,'string']
         ];
     }
 
